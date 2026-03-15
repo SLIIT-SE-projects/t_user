@@ -61,14 +61,14 @@ app.use((err, req, res, next) => {
 mongoose
   .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/shopease-users')
   .then(() => {
-    console.log('✅ Connected to MongoDB');
+    console.log(' Connected to MongoDB');
     app.listen(PORT, () => {
-      console.log(`🚀 User Service running on port ${PORT}`);
-      console.log(`📚 Swagger docs at http://localhost:${PORT}/api-docs`);
+      console.log(` User Service running on port ${PORT}`);
+      console.log(` Swagger docs at http://localhost:${PORT}/api-docs`);
     });
   })
   .catch((err) => {
-    console.error('❌ MongoDB connection error:', err.message);
+    console.error(' MongoDB connection error:', err.message);
     process.exit(1);
   });
 
